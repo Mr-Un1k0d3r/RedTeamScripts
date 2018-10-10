@@ -3,7 +3,8 @@ Repo with various Red Team scripts
 
 # password spraying
 ```
-pip install request_ntlm
+pip install requests_ntlm
+pip install requests
 ```
 
 ```
