@@ -2,6 +2,8 @@
 Repo with various Red Team scripts
 
 # password spraying
+
+Install the following dependencies
 ```
 pip install requests_ntlm
 pip install requests
