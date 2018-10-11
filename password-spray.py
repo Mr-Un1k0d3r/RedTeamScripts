@@ -17,7 +17,7 @@ def send_request(username, password, url, domain):
 if __name__ == "__main__":
 	print "PasswordSpraying v%s\n\n" % VERSION
 	if len(sys.argv) < 5:
-		print "Usage: %s list domain url password" % sys.argv[0]
+		print "Usage: %s [user list] [domain] [url] [password]" % sys.argv[0]
 		sys.exit(0)
 
 	domain = sys.argv[2]
