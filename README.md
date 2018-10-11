@@ -1,5 +1,5 @@
 # RedTeamScripts
-Repo with various Red Team scripts
+Repository with various Red Team scripts.
 
 # password spraying
 
