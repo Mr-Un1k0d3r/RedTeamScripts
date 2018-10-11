@@ -3,6 +3,8 @@ import base64
 import requests
 from requests_ntlm import HttpNtlmAuth
 
+VERSION = "1.0"
+
 def send_request(username, password, url, domain):
 	print "Trying user %s\\%s" % (domain, username)
 	try:
@@ -13,7 +15,7 @@ def send_request(username, password, url, domain):
 		print sys.exc_info()[0]
 	
 if __name__ == "__main__":
-
+	print "PasswordSpraying v%s\n\n" % VERSION
 	if len(sys.argv) < 5:
 		print "Usage: %s list domain url password" % sys.argv[0]
 		sys.exit(0)
