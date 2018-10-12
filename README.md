@@ -19,9 +19,9 @@ $ python password-spray.py users.txt RINGZER0 https://lyncweb.ringzer0team.com/a
 ```
 
 Note that various end points can be used to validate the user credentials:
-    * Lync (https://lyncweb.target.com/abs/)
-    * Office 365 (https://autodiscover-s.outlook.com/autodiscover/autodiscover.xml) (use email instead of DOMAIN\USER format)
-    * On premise OWA (https://mail.target.com/EWS/Exchange.asmx)
+* Lync (https://lyncweb.target.com/abs/)
+* Office 365 (https://autodiscover-s.outlook.com/autodiscover/autodiscover.xml) (use email instead of DOMAIN\USER format)
+* On premise OWA (https://mail.target.com/EWS/Exchange.asmx)
     
 There is several other urls that can be used for Lync & On premise OWA.
 
