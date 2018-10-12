@@ -17,7 +17,7 @@ def send_request(username, password, url, domain):
                 print sys.exc_info()[0]
 
 if __name__ == "__main__":
-        print "PasswordSpraying v%s\n\n" % VERSION
+        print "PasswordSpraying v%s\nWith Love Mr.Un1k0d3r RingZer0 Team\n-----------------------------------\n\n" % VERSION
         if len(sys.argv) < 5:
                 print "Usage: %s [user list] [domain] [url] [password]" % sys.argv[0]
                 sys.exit(0)
