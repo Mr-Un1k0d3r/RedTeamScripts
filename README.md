@@ -25,5 +25,17 @@ Note that various end points can be used to validate the user credentials. The s
     
 There is several other urls that can be used for Lync & On premise OWA.
 
+# CFMX6Decryptor
+
+Some people still live in the past. In 2018 we still managed to find ColdFusion MX 6 running publicly exposed. So this script may help someone retrieving the plain text version of the password that can be extract through the well known path traversal that affect ColdFusion.
+
+```
+$ java -jar CFMX6Decryptor.jar
+ColdFusion MX6 Password decryptor.
+Author Mr.Un1k0d3r & Psychan RingZer0 Team 2014
+
+Usage: DecryptCFPassword [uuencoded password]
+```
+
 # Credit
 Mr.Un1k0d3r RingZer0 Team
