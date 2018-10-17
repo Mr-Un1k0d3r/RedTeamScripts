@@ -27,7 +27,7 @@ There is several other urls that can be used for Lync & On premise OWA.
 
 # CFMX6Decryptor
 
-Some people still live in the past. In 2018 we still managed to find ColdFusion MX 6 running publicly exposed. So this script may help someone retrieving the plain text version of the password that can be extract through the well known path traversal that affect ColdFusion.
+Some people still live in the past. In 2018 we still find ColdFusion MX 6 publicly exposed. This script may help someone retrieving the plain text version of the password that can be extract through the well known path traversal that was affecting ColdFusion.
 
 ```
 $ java -jar CFMX6Decryptor.jar
