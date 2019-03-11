@@ -4,15 +4,26 @@ import requests
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 from requests_ntlm import HttpNtlmAuth
 
-VERSION = "1.0"
+VERSION = "1.1"
 
 def send_request(username, password, url, domain):
-        print "Trying user %s\\%s" % (domain, username)
+
+	if domain == "":
+		username = "%s" % (username)
+		print "Trying user %s" % (username)
+
+	else:
+		username = "%s\\%s" % (domain, username)
+		print "Trying user %s\\%s" % (domain, username)
+
         try:
                 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
-                req = requests.get(url, auth = HttpNtlmAuth("%s\\%s" % (domain, username), password), headers = {'User-Agent': 'Microsoft'}, verify=False)
+                req = requests.get(url, auth = HttpNtlmAuth(username, password), headers = {'User-Agent': 'Microsoft'}, verify=False)
                 if not req.status_code == 401:
                         print "User %s password is %s" % (username, password)
+
+		print req.content
+
         except:
                 print sys.exc_info()[0]
 
