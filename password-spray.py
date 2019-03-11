@@ -21,9 +21,6 @@ def send_request(username, password, url, domain):
                 req = requests.get(url, auth = HttpNtlmAuth(username, password), headers = {'User-Agent': 'Microsoft'}, verify=False)
                 if not req.status_code == 401:
                         print "User %s password is %s" % (username, password)
-
-		print req.content
-
         except:
                 print sys.exc_info()[0]
 
