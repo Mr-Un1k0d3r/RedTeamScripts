@@ -25,13 +25,14 @@ if __name__ == "__main__":
 	if auth.find("235 Authentication successful") == -1:
 		print "Auth failed"
 		sys.exit(0)
-	print auth	
+	print auth.strip()	
 		
 	s.send("mail from:%s\r\n" % sys.argv[2])
-	print s.recv(1024)
+	print s.recv(1024).strip()
 	s.send("rcpt to:%s\r\n" % sys.argv[3])
-	print s.recv(1024)
+	print s.recv(1024).strip()
 	s.send("DATA\r\n")
 	body = format_body(sys.argv[2], sys.argv[3], sys.argv[4], open(sys.argv[5], "rb").read())
 	s.send(body)
 	s.close()
+	print "[+] Completed"
