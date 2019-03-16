@@ -1,6 +1,35 @@
 # RedTeamScripts
 Repository with various Red Team scripts.
 
+# SendGrid SPF bypass
+
+Client that use sendgrid to send email need to add 167.89.0.0/17 to their SPF record to allow sendgrid to send email on their behalf. This is introducing a design flaw that can be leveraged to bypass SPF.
+
+How to:
+* Register an account on sendgrid
+* Get your API key
+* Send email on behalf of your target
+
+Why it's working? sendgrid subnet is part of your target SPF which mean that sedngrid is trusted to send emails on their behalf. Since your account is using sendgrid servers you are part of the whitelist too :)
+
+Which mean that from a Red Team perspective you can send email to your target claiming to be from their own mail domain or send email on their behalf to another organization.
+
+This is a great way to add credibility to your phishing campaign since you can spoof their domain.
+
+#### Is your target vulnerable 
+
+Simply take a look at their DNS TXT record and search for the following subnet 167.89.0.0/17. If it's present you are all set
+
+#### Usage
+
+```
+Usage: sendgrid-spf-bypass.py apikey source destination subject emailfile
+
+python sendgrid-spf-bypass.py apikey ceo@target.corp victim@target.corp "Legitimate email" my-email.txt
+```
+
+The `emailfile` parameter should be the path to a text file that contain your email. For now the tool only support text message I will improve it in the future.
+
 # Password spraying
 
 Install the following dependencies
