@@ -10,12 +10,10 @@ def send_request(username, password, url, domain):
 
 	if domain == "":
 		username = "%s" % (username)
-		print "Trying user %s" % (username)
-
 	else:
 		username = "%s\\%s" % (domain, username)
-		print "Trying user %s\\%s" % (domain, username)
 
+	print "Trying user %s" % (username)
         try:
                 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
                 req = requests.get(url, auth = HttpNtlmAuth(username, password), headers = {'User-Agent': 'Microsoft'}, verify=False)
