@@ -1,6 +1,28 @@
 # RedTeamScripts
 Repository with various Red Team scripts.
 
+# kill.exe
+
+Performing all kind of activities during a red team and you have several process running that you don't want to close manually. kill.exe is for you. copy it in `C:\Windows\` 
+and simply call it with the process name you want to kill.
+
+```
+>kill mspaint
+killing mspaint 16524
+killing mspaint 5284
+killing mspaint 8568
+killing mspaint 32244
+killing mspaint 18908
+killing mspaint 12600
+killing mspaint 37444
+killing mspaint 20492
+killing mspaint 36092
+killing mspaint 3908
+killing mspaint 30980
+killing mspaint 37252
+killing mspaint 27576
+```
+
 # SendGrid SPF bypass
 
 Client that use sendgrid to send email need to add 167.89.0.0/17 to their SPF record to allow sendgrid to send email on their behalf. This is introducing a design flaw that can be leveraged to bypass SPF.
